@@ -2,8 +2,8 @@ package cmd
 
 import (
 	"github.com/pterm/pterm"
+	"github.com/sllt/hole/internal/client/service"
 	"github.com/spf13/cobra"
-	"hole/internal/client/service"
 )
 
 func init() {

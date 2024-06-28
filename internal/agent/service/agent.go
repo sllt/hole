@@ -2,7 +2,7 @@ package service
 
 import (
 	"github.com/sllt/af/random"
-	"hole/internal/model"
+	"github.com/sllt/hole/internal/model"
 	"os"
 	"path/filepath"
 	"runtime"

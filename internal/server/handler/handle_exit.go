@@ -2,8 +2,8 @@ package handler
 
 import (
 	"github.com/sllt/booby"
-	"hole/internal/model/dto"
-	"hole/internal/server/global"
+	"github.com/sllt/hole/internal/model/dto"
+	"github.com/sllt/hole/internal/server/global"
 	"time"
 )
 

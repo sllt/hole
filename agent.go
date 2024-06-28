@@ -2,8 +2,8 @@ package hole
 
 import (
 	"github.com/sllt/booby"
-	"hole/internal/agent/router"
-	"hole/internal/agent/service"
+	"github.com/sllt/hole/internal/agent/router"
+	"github.com/sllt/hole/internal/agent/service"
 	"net"
 	"time"
 )

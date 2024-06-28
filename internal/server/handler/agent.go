@@ -2,8 +2,8 @@ package handler
 
 import (
 	"github.com/sllt/booby"
-	"hole/internal/model"
-	"hole/internal/server/global"
+	"github.com/sllt/hole/internal/model"
+	"github.com/sllt/hole/internal/server/global"
 )
 
 func AgentList(ctx *booby.Context) {

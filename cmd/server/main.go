@@ -4,10 +4,10 @@ import (
 	"flag"
 	"github.com/sllt/booby"
 	blog "github.com/sllt/booby/log"
+	"github.com/sllt/hole/internal/server/global"
+	"github.com/sllt/hole/internal/server/router"
+	"github.com/sllt/hole/pkg/logger"
 	"github.com/sllt/log"
-	"hole/internal/server/global"
-	"hole/internal/server/router"
-	"hole/pkg/logger"
 )
 
 func main() {

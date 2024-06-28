@@ -3,9 +3,9 @@ package main
 import (
 	"github.com/sllt/booby"
 	blog "github.com/sllt/booby/log"
+	"github.com/sllt/hole/cmd/client/cmd"
+	"github.com/sllt/hole/internal/client/global"
 	"github.com/sllt/log"
-	"hole/cmd/client/cmd"
-	"hole/internal/client/global"
 	"net"
 	"time"
 )

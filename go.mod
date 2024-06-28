@@ -1,4 +1,4 @@
-module hole
+module github.com/sllt/hole
 
 go 1.22.1
 

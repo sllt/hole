@@ -1,6 +1,6 @@
 package global
 
-import "hole/internal/model"
+import "github.com/sllt/hole/internal/model"
 
 var (
 	Agents map[string]*model.Agent

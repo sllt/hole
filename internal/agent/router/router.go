@@ -2,7 +2,7 @@ package router
 
 import (
 	"github.com/sllt/booby"
-	"hole/internal/agent/handler"
+	"github.com/sllt/hole/internal/agent/handler"
 )
 
 func RegisterAgentRoutes(client booby.Handler) {

@@ -3,7 +3,7 @@ package handler
 import (
 	"bytes"
 	"github.com/sllt/booby"
-	"hole/internal/model/dto"
+	"github.com/sllt/hole/internal/model/dto"
 	"os"
 	"os/exec"
 	"runtime"

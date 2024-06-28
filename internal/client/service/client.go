@@ -1,9 +1,9 @@
 package service
 
 import (
-	"hole/internal/client/global"
-	"hole/internal/model"
-	"hole/internal/model/dto"
+	"github.com/sllt/hole/internal/client/global"
+	"github.com/sllt/hole/internal/model"
+	"github.com/sllt/hole/internal/model/dto"
 	"time"
 )
 

@@ -2,7 +2,7 @@ package router
 
 import (
 	"github.com/sllt/booby"
-	"hole/internal/client/handler"
+	"github.com/sllt/hole/internal/client/handler"
 )
 
 func RegisterClientRoutes(server *booby.Server) {
