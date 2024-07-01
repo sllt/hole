@@ -6,7 +6,7 @@ require (
 	github.com/creack/pty v1.1.21
 	github.com/pterm/pterm v0.12.79
 	github.com/sllt/af v0.1.5
-	github.com/sllt/booby v0.0.1
+	github.com/sllt/booby v0.0.2
 	github.com/sllt/log v0.0.1
 	github.com/spf13/cobra v1.8.1
 )
@@ -35,5 +35,3 @@ require (
 	golang.org/x/term v0.16.0 // indirect
 	golang.org/x/text v0.14.0 // indirect
 )
-
-replace github.com/sllt/booby v0.0.1 => /Users/long/code/go/github.com/sllt/booby
