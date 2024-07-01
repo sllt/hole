@@ -1,9 +1,10 @@
 module github.com/sllt/hole
 
-go 1.22.1
+go 1.21.0
+
+toolchain go1.22.2
 
 require (
-	github.com/creack/pty v1.1.21
 	github.com/pterm/pterm v0.12.79
 	github.com/sllt/af v0.1.5
 	github.com/sllt/booby v0.0.2

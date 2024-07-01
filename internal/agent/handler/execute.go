@@ -2,6 +2,7 @@ package handler
 
 import (
 	"bytes"
+	"fmt"
 	"github.com/sllt/booby"
 	"github.com/sllt/hole/internal/model/dto"
 	"os"
@@ -33,13 +34,14 @@ func runCommand(commandLine string) (string, error) {
 
 	var cmd *exec.Cmd
 
-	if runtime.GOOS == "linux" || runtime.GOOS == "darwin" {
+	switch runtime.GOOS {
+	case "linux", "darwin":
 		cmd = exec.Command("bash", "-c", commandLine)
-	} else {
+	case "windows":
 		cmd = exec.Command("cmd", "/C", commandLine)
+	default:
+		return "", fmt.Errorf("unsupported OS: %s", runtime.GOOS)
 	}
-
-	cmd = exec.Command("bash", "-c", commandLine)
 
 	var out bytes.Buffer
 	cmd.Stdout = &out

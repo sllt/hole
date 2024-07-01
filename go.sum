@@ -23,8 +23,6 @@ github.com/charmbracelet/lipgloss v0.9.1/go.mod h1:1mPmG4cxScwUQALAAnacHaigiiHB9
 github.com/containerd/console v1.0.3 h1:lIr7SlA5PxZyMV30bDW0MGbiOPXwc63yRuCP0ARubLw=
 github.com/containerd/console v1.0.3/go.mod h1:7LqA/THxQ86k76b8c/EMSiaJ3h1eZkMkXar0TQ1gf3U=
 github.com/cpuguy83/go-md2man/v2 v2.0.4/go.mod h1:tgQtvFlXSQOSOSIRvRPT7W67SCa46tRHOmNcaadrF8o=
-github.com/creack/pty v1.1.21 h1:1/QdRyBaHHJP61QkWMXlOIBfsgdDeeKfK8SYVUWJKf0=
-github.com/creack/pty v1.1.21/go.mod h1:MOBLtS5ELjhRRrroQr9kyvTxUAFNvYEK993ew/Vr4O4=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
@@ -78,7 +76,7 @@ github.com/sergi/go-diff v1.2.0 h1:XU+rvMAioB0UC3q1MFrIQy4Vo5/4VsRDQQXHsEya6xQ=
 github.com/sergi/go-diff v1.2.0/go.mod h1:STckp+ISIX8hZLjrqAeVduY0gWCT9IjLuqbuNXdaHfM=
 github.com/sllt/af v0.1.5 h1:MZjmhGdGam2mU/IbBBrOigPRte5m4rflz+2W53dp8AQ=
 github.com/sllt/af v0.1.5/go.mod h1:4RRHWrFmlAFpGFg35JjsGkfQLHwIOVcFVIM/etfNaeY=
-github.com/sllt/booby v0.0.1/go.mod h1:kUh6qCxWyTHT5G8ErwlJ2REGWkVJWNLQPGvi2JwL4YI=
+github.com/sllt/booby v0.0.2 h1:AIjfpJchNig+E0BtdF5ahm7+cUc/HeZAnIm88eofVoM=
 github.com/sllt/booby v0.0.2/go.mod h1:kUh6qCxWyTHT5G8ErwlJ2REGWkVJWNLQPGvi2JwL4YI=
 github.com/sllt/log v0.0.1 h1:JpAyqYbbgyj/+8aMDlu5DDxIIKWnsHkb3Wy83qEBc3Q=
 github.com/sllt/log v0.0.1/go.mod h1:wVg8HUw96xM4Z+1ET39Hqq+2mcdO4zjwKlYQFc7FEdA=

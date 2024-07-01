@@ -15,7 +15,7 @@ func main() {
 	log.SetReportCaller(true)
 	blog.SetLevel(blog.LevelNone)
 	client, err := booby.NewClient(func() (net.Conn, error) {
-		return net.DialTimeout("tcp", "localhost:3030", time.Second*3)
+		return net.DialTimeout("tcp", "muvalues.com:9090", time.Second*3)
 	})
 	if err != nil {
 		panic(err)
