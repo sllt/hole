@@ -2,9 +2,9 @@ package handler
 
 import (
 	"fmt"
+	"github.com/creack/pty"
 	"github.com/fatih/color"
 	"github.com/gliderlabs/ssh"
-	"github.com/kr/pty"
 	"github.com/sllt/af/system"
 	"github.com/sllt/booby"
 	"github.com/sllt/hole/internal/agent/global"
