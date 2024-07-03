@@ -8,13 +8,10 @@ import (
 	"github.com/sllt/af/system"
 	"github.com/sllt/booby"
 	"github.com/sllt/hole/internal/agent/global"
-	"github.com/sllt/log"
 	"golang.org/x/term"
 	"io"
 	"os"
 	"os/exec"
-	"os/signal"
-	"syscall"
 )
 
 func commandShellHandler(s ssh.Session) {
@@ -98,20 +95,7 @@ func unixShellHandler(s ssh.Session) {
 	}
 	// Make sure to close the pty at the end.
 	defer func() { _ = ptmx.Close() }() // Best effort.
-
-	// Handle pty size.
-	ch := make(chan os.Signal, 1)
-	signal.Notify(ch, syscall.SIGWINCH)
-	go func() {
-		for range ch {
-			if err := pty.InheritSize(os.Stdin, ptmx); err != nil {
-				log.Printf("error resizing pty: %s", err)
-			}
-		}
-	}()
-	ch <- syscall.SIGWINCH                        // Initial resize.
-	defer func() { signal.Stop(ch); close(ch) }() // Cleanup signals when done.
-
+	
 	// Copy stdin to the pty and the pty to stdout.
 	// NOTE: The goroutine will keep reading until the next keystroke before returning.
 	go func() { _, _ = io.Copy(ptmx, s) }()
