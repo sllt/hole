@@ -43,3 +43,45 @@ func (c *client) Exec(agentName string, cmd string) (string, error) {
 	err := global.Client.Call("/handle/exec", req, &result, time.Second)
 	return result, err
 }
+
+func (c *client) StartSocks(agentName string, port int) (string, error) {
+	req := &dto.StartSocksRequest{
+		AgentName: agentName,
+		Port:      port,
+	}
+
+	var result string
+	err := global.Client.Call("/handle/socks/start", req, &result, time.Second)
+	return result, err
+}
+
+func (c *client) StopSocks(agentName string) (string, error) {
+	req := &dto.StartSocksRequest{
+		AgentName: agentName,
+	}
+
+	var result string
+	err := global.Client.Call("/handle/socks/stop", req, &result, time.Second)
+	return result, err
+
+}
+
+func (c *client) StartShell(agentName string) (string, error) {
+	req := &dto.ShellRequest{
+		AgentName: agentName,
+	}
+
+	var result string
+	err := global.Client.Call("/handle/shell/start", req, &result, time.Second)
+	return result, err
+}
+
+func (c *client) StopShell(agentName string) (string, error) {
+	req := &dto.ShellRequest{
+		AgentName: agentName,
+	}
+
+	var result string
+	err := global.Client.Call("/handle/shell/stop", req, &result, time.Second)
+	return result, err
+}

@@ -2,8 +2,8 @@ package hole
 
 import (
 	"github.com/sllt/booby"
+	"github.com/sllt/hole/internal/agent/global"
 	"github.com/sllt/hole/internal/agent/router"
-	"github.com/sllt/hole/internal/agent/service"
 	"net"
 	"time"
 )
@@ -24,13 +24,12 @@ func StartAgent(serverAddr string) {
 	client.Call("/ping", nil, &result, time.Second)
 	router.RegisterAgentRoutes(client.Handler)
 
-	agent, _ := service.GetAgentInfo()
+	client.Call("/agent/register", global.Agent, nil, time.Second)
 
-	client.Call("/agent/register", &agent, nil, time.Second)
-
-	client.Set("short-name", agent.ShortName)
+	client.Set("short-name", global.Agent.ShortName)
 
 	client.Handler.HandleConnected(func(client *booby.Client) {
-		client.Call("/agent/register", &agent, nil, time.Second)
+		client.Call("/agent/register", global.Agent, nil, time.Second)
 	})
+
 }

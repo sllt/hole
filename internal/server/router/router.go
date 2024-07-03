@@ -14,4 +14,12 @@ func RegisterRoutes(server *booby.Server) {
 	// handle
 	server.Handler.Handle("/handle/exit", handler.HandleExit)
 	server.Handler.Handle("/handle/exec", handler.HandleExecute)
+
+	// shell
+	server.Handler.Handle("/handle/shell/start", handler.StartAgentShell)
+	server.Handler.Handle("/handle/shell/stop", handler.StopAgentShell)
+
+	// socks
+	server.Handler.Handle("/handle/socks/start", handler.StartAgentSocks)
+	server.Handler.Handle("/handle/socks/stop", handler.StopAgentSocks)
 }

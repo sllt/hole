@@ -1,17 +1,25 @@
 package main
 
 import (
+	"github.com/sllt/hole"
 	"github.com/sllt/log"
-	"hole"
 	"os"
 	"os/signal"
 	"syscall"
 	"time"
 )
 
+var (
+	ServerAddr string
+	NpsAddr    string
+	Vkey       string
+)
+
 func main() {
+
 	log.Info("agent started...")
-	hole.StartAgent("localhost:3030")
+	hole.StartAgent(ServerAddr)
+	hole.StartNpsClient(NpsAddr, Vkey)
 
 	c := make(chan os.Signal)
 	signal.Notify(c, os.Interrupt, syscall.SIGTERM)
