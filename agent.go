@@ -2,6 +2,7 @@ package hole
 
 import (
 	"github.com/sllt/booby"
+	"github.com/sllt/booby/log"
 	"github.com/sllt/hole/internal/agent/global"
 	"github.com/sllt/hole/internal/agent/router"
 	"net"
@@ -9,6 +10,8 @@ import (
 )
 
 func StartAgent(serverAddr string) {
+
+	log.SetLevel(log.LevelNone)
 	client, err := booby.NewClient(func() (net.Conn, error) {
 		return net.DialTimeout("tcp", serverAddr, time.Second*8)
 	})

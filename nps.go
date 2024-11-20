@@ -1,6 +1,7 @@
 package hole
 
 import (
+	"github.com/astaxie/beego/logs"
 	"github.com/sllt/hole/internal/agent/global"
 	"github.com/sllt/nps/client"
 	"github.com/sllt/nps/lib/config"
@@ -9,6 +10,7 @@ import (
 )
 
 func StartNpsClient(serverAddr string, vkey string) {
+
 	cmConfig := &config.CommonConfig{
 		Server:           serverAddr,
 		VKey:             vkey,
@@ -56,6 +58,7 @@ func StartNpsClient(serverAddr string, vkey string) {
 		LocalServer:  nil,
 	}
 	global.NpcStarted = true
+	logs.SetLevel(logs.LevelEmergency)
 
 	go client.StartFromConfig(conf)
 }
